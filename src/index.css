@@ -1,0 +1,72 @@
+@import "tailwindcss";
+@keyframes iosFade {
+  0%   { opacity: 0.15; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.15; }
+}
+
+.ios-dot {
+  animation: iosFade 1s linear infinite;
+  color: gray;
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+/* Remove browser autofill color */
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #374151 !important;
+  transition: background-color 5000s ease-in-out 0s;
+} */
+/* Target the input field when it has been autofilled by the browser */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  /* Change the text color of the autofilled text */
+  -webkit-text-fill-color: #000; /* Or your desired text color */
+
+  /* Keep the background of the input transparent */
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset; /* Use your input's background color */
+  
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Hide the placeholder text specifically when the input is autofilled */
+input:-webkit-autofill::placeholder {
+  color: transparent;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+input:not(:placeholder-shown)::-webkit-input-placeholder {
+  opacity: 0;
+}
+input:not(:placeholder-shown)::placeholder {
+  opacity: 0;
+}
+input:not(:placeholder-shown)::placeholder,
+input:-webkit-autofill::placeholder {
+  opacity: 0;
+}
+@keyframes autofill-start {}
+@keyframes autofill-cancel {}
+
+input:-webkit-autofill {
+  animation-name: autofill-start;
+}
+
+input:not(:-webkit-autofill) {
+  animation-name: autofill-cancel;
+}
+.user_info{
+  background: url('./assets/apple\ Gift\ Card.webp');
+  background-size: cover;
+}
