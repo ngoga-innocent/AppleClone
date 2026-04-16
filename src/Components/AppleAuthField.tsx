@@ -69,10 +69,10 @@ export default function AppleAuthFields() {
           />
           <label
             htmlFor="email" // Link label to input via ID
-            className="absolute left-5 top-6 text-gray-500 text-lg transition-all duration-200 
-               peer-placeholder-shown:top-6 peer-placeholder-shown:text-lg
-               peer-focus:top-2 peer-focus:text-sm peer-focus:text-gray-500
-               peer-not-placeholder-shown:top-2 peer-not-placeholder-shown:text-sm"
+            className="absolute left-5 top-4 text-gray-500 text-lg transition-all duration-200 
+               peer-placeholder-shown:top-4 peer-placeholder-shown:text-lg
+               peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-500
+               peer-not-placeholder-shown:top-2 peer-not-placeholder-shown:text-xs"
           >
             Email or Phone Number
           </label>
@@ -96,9 +96,9 @@ export default function AppleAuthFields() {
             placeholder="Password"
           />
           <label
-            className="absolute left-5 top-6 text-gray-500 text-lg transition-all duration-200 
-            peer-focus:top-2 peer-focus:text-sm peer-focus:text-gray-500
-            peer-not-placeholder-shown:top-2 peer-not-placeholder-shown:text-sm"
+            className="absolute left-5 top-4 text-gray-500 text-lg transition-all duration-200 
+            peer-focus:top-2 peer-focus:text-xs peer-focus:text-gray-500
+            peer-not-placeholder-shown:top-2 peer-not-placeholder-shown:text-xs"
           >
             Password
           </label>
